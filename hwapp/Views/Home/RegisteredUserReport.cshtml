@@ -1,0 +1,39 @@
+﻿@model List<Registrations>
+@{
+    ViewData["Title"] = "RegisteredUserReport";
+}
+
+<h2>RegisteredUserReport</h2>
+<table class="display table table-striped">
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Address1</th>
+            <th>Address2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Country</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var r in Model)
+            {
+        <tr>
+            <td>@r.LastName</td>
+            <td>@r.FirstName</td>
+            <td>@r.Address1</td>
+            <td>@r.Address2</td>
+            <td>@r.City</td>
+            <td>@r.State</td>
+            <td>@r.Zip</td>
+            <td>@r.Country</td>
+            <td>@r.Date</td>
+        </tr>
+            }
+        }
+</table>
+
